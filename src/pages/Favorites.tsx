@@ -14,9 +14,13 @@ const Favorites: React.FC = () => {
   useEffect(() => {
     const loadFavorites = async () => {
       const stories = await Promise.all(favoriteIds.map(fetchStory));
-      setFavorites(stories);
+      setFavorites(stories.filter(story => story)); // Фильтрация, чтобы избежать добавления null значений
     };
-    if (favoriteIds.length) loadFavorites();
+    if (favoriteIds.length) {
+      loadFavorites();
+    } else {
+      setFavorites([]);
+    }
   }, [favoriteIds]);
 
   const handleToggleFavorite = (id: number) => {
