@@ -1,0 +1,12 @@
+.newsItem {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.newsItem h2 {
+  font-size: 20px;
+}
+
+.newsItem p {
+  font-size: 14px;
+}

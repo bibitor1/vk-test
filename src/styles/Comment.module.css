@@ -1,0 +1,9 @@
+.comment {
+  padding: 10px;
+  border-left: 2px solid #ccc;
+  margin-left: 20px;
+}
+
+.nestedComments {
+  margin-top: 10px;
+}
